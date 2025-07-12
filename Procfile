@@ -1,1 +1,1 @@
-worker: python3 bot.py
+python3 smosser/bot.py
