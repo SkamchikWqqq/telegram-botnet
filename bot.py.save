@@ -1,0 +1,34 @@
+import telebot
+from telebot import types
+
+# Токен Telegram-бота
+BOT_TOKEN = '7311549876:AAEh6SWIgNfhWKy9oji88kzZ8jSbEh089c0'
+
+# ID твоей фотографии
+PHOTO_PATH = 'photo.jpg'  # Название файла, который ты присылал
+
+bot = telebot.TeleBot(BOT_TOKEN)
+
+# Стартовая команда
+@bot.message_handler(commands=['start'])
+def start_message(message):
+    markup = types.InlineKeyboardMarkup()
+    buy_btn = types.InlineKeyboardButton("Купить подписку", callback_data="buy")
+    markup.add(buy_btn)
+
+    with open(PHOTO_PATH, 'rb') as photo:
+        bot.send_photo(message.chat.id, photo, caption="Привет! Купи подписку, чтобы продолжить.", reply_markup=markup)
+
+# Обработка кнопки "Купить подписку"
+@bot.callback_query_handler(func=lambda call: call.data == "buy")
+def handle_buy(call):
+    bot.send_message(call.message.chat.id, "сейчас автоподписка не работает хочешь купить подписку пиши @paranoiafsb с лишними вопросами не пишите):")
+
+# Обработка введённого чека
+@bot.message_handler(func=lambda message: "$" in message.text)
+def check_payment(message):
+    if "7$" in message.text or "$7" in message.text:
+        bot.send_message(message.chat.id, "Поздравляю, подписка успешно куплена!")
+    else:
+        bot.send_message(message.ch
+

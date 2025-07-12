@@ -1,0 +1,15 @@
+{
+  "130231824": true,
+  "7723472532": {
+    "subscription": "forever",
+    "expire": "forever"
+  },
+  "1171367523": {
+    "subscription": "week",
+    "expire": "2025-06-05T15:17:47.958896"
+  },
+  "6982371213": {
+    "subscription": "week",
+    "expire": "2025-06-12T16:24:48.479299"
+  }
+}
