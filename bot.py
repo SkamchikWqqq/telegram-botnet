@@ -8,8 +8,8 @@ import time
 from datetime import datetime, timedelta
 
 # Токены и настройки
-TELEGRAM_TOKEN = '7311549876:AAEh6SWIgNfhWKy9oji88kzZ8jSbEh089c0'
-CRYPTOBOT_TOKEN = '7806921239:AAF0EEDLvlA0qSzP8ROcDuU9UTtQgwPPBno'  # Твой полный токен
+TELEGRAM_TOKEN = '7806921239:AAF0EEDLvlA0qSzP8ROcDuU9UTtQgwPPBno'
+CRYPTOBOT_TOKEN = '403239:AA1REXVjgYxtMRELxI5pFOLLIP5swiri2Ke'  # Твой полный токен
 ADMIN_ID = 130231824
 BOT_USERNAME = '@ParanoikovichBot'
 
